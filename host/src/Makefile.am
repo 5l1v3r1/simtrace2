@@ -5,7 +5,8 @@ AM_LDFLAGS=$(COVERAGE_LDFLAGS)
 LDADD= $(top_builddir)/lib/libosmo-simtrace2.la \
        $(LIBOSMOCORE_LIBS) $(LIBOSMOSIM_LIBS) $(LIBOSMOUSB_LIBS) $(LIBUSB_LIBS)
 
-bin_PROGRAMS = simtrace2-remsim simtrace2-remsim-usb2udp simtrace2-list simtrace2-sniff
+bin_PROGRAMS = simtrace2-remsim simtrace2-remsim-usb2udp simtrace2-list simtrace2-sniff \
+	       simtrace2-tool
 
 simtrace2_remsim_SOURCES = simtrace2-remsim.c
 
@@ -14,3 +15,5 @@ simtrace2_remsim_usb2udp_SOURCES = usb2udp.c
 simtrace2_list_SOURCES = simtrace2_usb.c
 
 simtrace2_sniff_SOURCES = simtrace2-sniff.c
+
+simtrace2_tool_SOURCES = simtrace2-tool.c
